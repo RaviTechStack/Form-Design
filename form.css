@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.flex{
+    display: flex;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body{
+    height: 100vh;
+    background: url("./background.jpeg") no-repeat;
+    background-size: 100%;
+    backdrop-filter: blur(10px);
+}
+.container{
+    position: relative;
+    width: 70%;
+   
+}
+.signup, .login{
+    width: 50%;
+    flex-direction: column;
+    background: linear-gradient(45deg, black, rgb(88, 88, 88), black);
+    padding: 1rem;
+    color: white;
+    box-shadow: 3px 3px 4px  rgb(0, 0, 0);
+} 
+.signup-content, .login-content{
+    flex-direction: column;
+    width: 97%;
+    padding: .7rem 1.2rem;
+    margin-bottom: 1rem;
+    
+}
+
+label{
+    font-weight: 700;
+}
+input{
+    padding: .2rem .1rem;
+    border: none;
+    margin-top: .3rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid white;
+    background: none;
+    width: 90%;
+    outline: none;
+    color: white;
+}
+input::placeholder{
+    font-size: .8rem;
+    color: rgb(165, 165, 165);
+}
+button{
+    background-color: transparent;
+    border-top-color: rgb(247, 0, 99);
+    border-left-color: rgb(247, 0, 99);
+    border-bottom-color: blue;
+    border-right-color: blue;
+    padding: .3rem .9rem;
+    color: white;
+    font-size: .9rem;
+    font-weight: 700;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+button:hover{
+    background-color: rgba(239, 239, 239, 0.326);
+    color: rgb(0, 0, 0);
+}
+.loginbtn{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    gap: .8rem;
+    background-color: #ff4500;
+    box-shadow: 2px 2px 3px  orange;
+    transition: all .4s linear;
+}
+.position{
+    transform: translateX(100%);
+}
+.heading{
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: white;
+}
+.login-btn{
+    background-color: white;
+    color: black;
+
+
+}
+
+
+@media (max-width: 750px){
+    html{
+        font-size: 62.5%;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .loginbtn{
+        width: 100%;
+        height: 50%;
+    }
+    .signup, .login{
+        width: 100%;
+        height: 50%;
+    }
+    .signup-content, .login-content{
+        height: 100%;
+    }
+    
+
+}
+
+
+
